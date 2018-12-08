@@ -1,0 +1,150 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #333333;
+}
+ul {
+    list-style-type: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    /*margin: 0 20%;*/
+}
+div{
+    background-color:#FFEBCD;
+}
+
+header {
+    width: 100%;
+    height: 420px;
+    background: url("../img/00.jpg");
+    position: relative;
+    margin-bottom: 15px;
+}
+header h1{
+    font-size: 60px;
+    
+padding-left: 20px;
+padding-top: 20px;
+ text-shadow: 2px 2px white,
+               2px 2px white;
+  color: #C71585;
+  transition: all 1s;
+}
+header ul {
+    background: #FFDAB9;
+        
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;}
+
+
+
+header ul li{
+    display: inline-block; 
+    border: solid red 1px;
+}
+header ul li a {
+    font-size: 20px;
+    width: 200px;
+    display: block;
+    color:  #A52A2A;
+    padding: 10px;
+}
+header ul li a:hover {
+    background: #fff;
+    color: #000;
+}
+.tovdiscr p{text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    line-height: 30px;
+    color: #800000; }
+.tov{
+    
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+
+}
+.main-cart {
+       margin-left: 10vw;
+       margin-right: 10vw;
+
+    font-style: italic;
+    line-height: 30px;
+    color: #800000; 
+    }
+.main-cart img {
+    max-width: 100px;
+}
+
+.del-goods{margin-left: 20px;
+padding: 7px;}
+/*  */
+.cart {
+    width: 300px;
+    max-height: 440px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    margin: 60px;
+
+    float: left;
+}
+.cart .name {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.cart img{max-height: 200px;
+}
+.cart .cost {
+    font-size: 3vh;
+    margin: 1vh 0;
+}
+.cart .description{
+    margin: 1vh 0;
+}
+.cart .add-to-cart {
+    font-size: 1.1rem;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.cart .add-to-cart:hover {
+    background: cadetblue;
+}
+.cart .add-to-cart:active {
+    background: red;
+}
+/*  */
+
+
+.goods-out {
+    margin-left: 30vw; 
+}
+.goods-out::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+footer {
+    width: 100%;
+    height: 10px;
+    margin-top: 15px;
+    background-color:#FFEBCD;
+    padding: 20px 0;
+    text-align: center;
+}

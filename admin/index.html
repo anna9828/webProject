@@ -1,0 +1,139 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "eshop";
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>eshop</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+<header>
+
+<h1>	UNICORN </h1>
+<ul>
+	<li><a href="/">О НАС</a></li>
+	<li><a href="/">КОРЗИНА</a></li>
+	<li><a href="admin/index.html">НАШИ ТОВАРЫ</a></li>
+	<li><a href="/">КОНТАКТЫ</a></li>
+</ul>
+</header>
+<main>
+    <div class="mini-cart"></div>
+    <div class="goods-out"></div>
+</main>
+
+<div class="tov">
+
+<div class="cart1">
+		<?php 
+       $result = mysql_query("SELECT * FROM table_product WHERE visible='1'",$link);
+       if (mysql_num_rows($result) > 0) {
+         $row = mysql_fetch_array($result);
+         do{
+           echo '
+
+ 
+   <p class="name"><a href="" >'.$row["name"].'</a></p>
+    <img src="img/miha.jpg" alt=""> 
+    <div class="cost">'.$row["price"].'</div>
+    <div class="description">Мягкий и пушистый медведь, 50 см</div>
+    <button class="add-to-cart">Купить</button>
+
+</div>
+<div class="cart2">
+   <p class="name">Плюшевый зайка</p>
+    <img src="img/zaya.jpg" alt=""> 
+    <div class="cost">150грн</div>
+    <div class="description">30 см</div>
+    <button class="add-to-cart">Купить</button>
+</div>
+
+<div class="cart3">
+   <p class="name">Мягкая игрушка единорог</p>
+    <img src="img/rog.png" alt=""> 
+    <div class="cost">150грн</div>
+    <div class="description">30 см</div>
+    <button class="add-to-cart">Купить</button>
+</div>
+
+
+
+
+<div class="cart4">
+   <p class="name">Мягкая игрушка милый тюленёнок</p>
+    <img src="img/tulen.jpg" alt=""> 
+    <div class="cost">200грн</div>
+    <div class="description">30 см</div>
+    <button class="add-to-cart">Купить</button>
+</div>
+
+
+<div class="cart5">
+   <p class="name">Настольная игра Алиас вечеринка</p>
+    <img src="img/alias.jpg" alt=""> 
+    <div class="cost">200грн</div>
+    <div class="description">Алиас для вечеринок (Party Alias) </div>
+    <button class="add-to-cart">Купить</button>
+</div>
+
+<div class="cart6">
+   <p class="name">Настольная игра Запретный остров</p>
+    <img src="img/ostrov.jpg" alt=""> 
+    <div class="cost">160грн</div>
+    <div class="description"> Настольная игра</div>
+    <button class="add-to-cart">Купить</button>
+</div>
+<div class="cart7">
+   <p class="name">Монополия</p>
+    <img src="img/monopoly.jpg" alt=""> 
+    <div class="cost">300грн</div>
+    <div class="description"> Настольная игра</div>
+    <button class="add-to-cart">Купить</button>
+</div>
+<div class="cart8">
+   <p class="name">Конструктор Lego</p>
+    <img src="img/LEGO.jpg" alt=""> 
+    <div class="cost">1000грн</div>
+    <div class="description">Конструктор</div>
+    <button class="add-to-cart">Купить</button>
+</div>
+<div class="cart9">
+   <p class="name">Металлический конструктор Автомобиль</p>
+    <img src="img/metall.jpg" alt=""> 
+    <div class="cost">200грн</div>
+    <div class="description">Конструктор</div>
+    <button class="add-to-cart">Купить</button>
+</div>
+<div class="cart10">
+   <p class="name">Конструктор из дерева Замок</p>
+    <img src="img/derevo.jpg" alt=""> 
+    <div class="cost">290грн</div>
+    <div class="description">Конструктор</div>
+    <button class="add-to-cart">Купить</button>
+</div>
+
+     }
+         while ( $row = mysql_fetch_array($result)); 
+         }
+        ?>
+
+
+</div>
+
+
+
+
+<footer></footer>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>
